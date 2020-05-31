@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="App3.1"
+        android:textSize="35sp"
+        android:gravity="center"
+        android:layout_marginTop="10sp"
+        android:textStyle="bold"
+        />
+    <ImageView
+        android:id="@+id/imgWorld"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/world"
+        android:layout_marginTop="35sp"
+        android:layout_below="@+id/txtTitulo"
+        />
+    <EditText
+        android:id="@+id/txtCampo1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:shadowColor="@android:color/holo_blue_dark"
+        android:layout_below="@+id/imgWorld"
+        android:layout_marginTop="35sp"
+        android:hint="Ingrese su nombre"
+
+        />
+    <EditText
+        android:id="@+id/txtCampo2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:shadowColor="@android:color/holo_green_light"
+        android:layout_below="@+id/txtCampo1"
+        android:layout_marginTop="35sp"
+        android:hint="Ingrese su año de Nacimiento"
+        android:inputType="number"
+        />
+    <Button
+        android:id="@+id/btnPulsar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtCampo2"
+        android:background="@android:color/background_dark"
+        android:textColor="@android:color/white"
+        android:text="Pulsar"
+        android:textSize="25sp"
+        android:layout_marginTop="35sp"
+        android:onClick="onclick"
+        />
+    <TextView
+        android:id="@+id/txtResultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="..."
+        android:textSize="35sp"
+        android:gravity="center"
+        android:layout_below="@+id/btnPulsar"
+        android:layout_marginTop="35sp"
+        />
+    <Button
+        android:id="@+id/btnPulsar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtResultado"
+        android:background="@android:color/background_dark"
+        android:textColor="@android:color/white"
+        android:text="Calcular Productos"
+        android:textSize="25sp"
+        android:layout_marginTop="35sp"
+        android:onClick="onclick"
+        />
+
+
+</RelativeLayout>

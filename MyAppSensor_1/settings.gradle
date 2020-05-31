@@ -1,0 +1,2 @@
+rootProject.name='MyAppSensor_1'
+include ':app'

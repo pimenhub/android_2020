@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NoticiasActivity"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Noticias del Momento"
+        android:layout_marginTop="25sp"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:textStyle="italic"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="25sp"
+
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="15sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Acticulo 1"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"
+
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vestibulum morbi blandit cursus risus at ultrices mi. Enim neque volutpat ac tincidunt. Purus sit amet volutpat consequat mauris nunc congue nisi. Mauris pharetra et ultrices neque. Quis commodo odio aenean sed adipiscing diam donec. Volutpat lacus laoreet non curabitur gravida arcu ac tortor dignissim. Cras ornare arcu dui vivamus arcu. "
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:layout_marginBottom="25sp"
+                android:textIsSelectable="true"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Acticulo 2"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vestibulum morbi blandit cursus risus at ultrices mi. Enim neque volutpat ac tincidunt. Purus sit amet volutpat consequat mauris nunc congue nisi. Mauris pharetra et ultrices neque. Quis commodo odio aenean sed adipiscing diam donec. Volutpat lacus laoreet non curabitur gravida arcu ac tortor dignissim. Cras ornare arcu dui vivamus arcu. "
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:layout_marginBottom="25sp"
+                android:textIsSelectable="true"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Acticulo 3"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"
+                />
+            <ImageView
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:src="@drawable/news"
+                android:layout_gravity="center"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vestibulum morbi blandit cursus risus at ultrices mi. Enim neque volutpat ac tincidunt. Purus sit amet volutpat consequat mauris nunc congue nisi. Mauris pharetra et ultrices neque. Quis commodo odio aenean sed adipiscing diam donec. Volutpat lacus laoreet non curabitur gravida arcu ac tortor dignissim. Cras ornare arcu dui vivamus arcu. "
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:layout_marginBottom="25sp"
+                android:textIsSelectable="true"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Acticulo 4"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vestibulum morbi blandit cursus risus at ultrices mi. Enim neque volutpat ac tincidunt. Purus sit amet volutpat consequat mauris nunc congue nisi. Mauris pharetra et ultrices neque. Quis commodo odio aenean sed adipiscing diam donec. Volutpat lacus laoreet non curabitur gravida arcu ac tortor dignissim. Cras ornare arcu dui vivamus arcu. "
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:layout_marginBottom="25sp"
+                android:textIsSelectable="true"
+
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

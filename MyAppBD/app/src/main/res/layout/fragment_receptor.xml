@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFEB3B"
+    tools:context=".ReceptorFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Informacion"
+            android:textSize="25dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@android:color/black"
+            />
+
+        <TextView
+            android:id="@+id/IdF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="..."
+            android:textSize="20dp"
+            android:layout_margin="10dp"
+            android:textColor="@android:color/black"
+            />
+        <TextView
+            android:id="@+id/MarcaF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="..."
+            android:textSize="20dp"
+            android:layout_margin="10dp"
+            android:textColor="@android:color/black"
+            />
+        <TextView
+            android:id="@+id/NombreF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="..."
+            android:textSize="20dp"
+            android:layout_margin="10dp"
+            android:textColor="@android:color/black"
+            />
+        <TextView
+            android:id="@+id/SaborF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="..."
+            android:textSize="20dp"
+            android:layout_margin="10dp"
+            android:textColor="@android:color/black"
+            />
+
+    </LinearLayout>
+
+</FrameLayout>

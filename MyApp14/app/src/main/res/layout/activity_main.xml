@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        >
+        <Button
+            android:id="@+id/btnF1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="F1"
+            android:onClick="onClick"
+            />
+        <Button
+            android:id="@+id/btnF2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="F2"
+            android:onClick="onClick"
+            />
+        <Button
+            android:id="@+id/btnF3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="F3"
+            android:onClick="onClick"
+            />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/contendorId"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="6dp"
+        />
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--<fragment
+        android:id="@+id/fr1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        tools:layout="@layout/fragment__a"
+        android:name="com.example.myapp14.Fragment_A"
+        />
+    <fragment
+        android:id="@+id/fr2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        tools:layout="@layout/fragment__b"
+        android:name="com.example.myapp14.Fragment_B"
+        />
+    -->
+</LinearLayout>

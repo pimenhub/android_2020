@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IntermediaActivity">
+
+    <ImageView
+        android:id="@+id/imgForest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/forest"
+        android:layout_marginTop="15sp"
+        android:layout_centerHorizontal="true"
+        />
+    <TextView
+        android:id="@+id/txtParrafo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgForest"
+        android:layout_marginTop="45sp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dignissim faucibus odio ut consectetur. Vivamus eu felis non mi sollicitudin volutpat suscipit iaculis lorem. Nulla facilisis malesuada est at bibendum. Donec aliquet condimentum porta. Nulla at viverra lorem. Integer consequat turpis eget iaculis blandit. Phasellus posuere diam et arcu posuere interdum ac in arcu. Quisque ut purus lacinia, sodales lacus id, blandit turpis. Fusce lacinia quam nulla, sed efficitur est sagittis sit amet. Proin tempus arcu eget nunc fermentum, non sollicitudin arcu mattis. Quisque tincidunt neque et fermentum ultricies."
+        android:layout_marginLeft="15sp"
+        android:layout_marginRight="15sp"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        />
+    <Button
+        android:id="@+id/btnRegresar"
+        android:layout_width="150sp"
+        android:layout_height="50sp"
+        android:layout_below="@+id/txtParrafo"
+        android:layout_marginTop="35sp"
+        android:text="Regresar"
+        android:textColor="@android:color/holo_blue_dark"
+        android:layout_marginLeft="15sp"
+        android:onClick="onClickA2"
+        />
+    <Button
+        android:id="@+id/btnSiguiente"
+        android:layout_width="150sp"
+        android:layout_height="50sp"
+        android:layout_below="@+id/txtParrafo"
+        android:layout_marginTop="35sp"
+        android:text="Siguiente"
+        android:textColor="@android:color/holo_orange_dark"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15sp"
+        android:onClick="onClickA2"
+        />
+
+
+
+</RelativeLayout>

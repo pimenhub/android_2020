@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:onClick="Ocultar">
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Operaciones Aritméticas"
+        android:textSize="35sp"
+        android:layout_marginTop="20sp"
+        android:gravity="center"
+         />
+    <EditText
+        android:id="@+id/txtCampo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Ingrese un numero"
+        android:layout_below="@+id/txtTitulo"
+        android:layout_marginTop="35sp"
+        android:layout_centerInParent="true"
+        android:inputType="numberDecimal"
+        android:gravity="center"
+        />
+    <EditText
+        android:id="@+id/txtCampo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtCampo1"
+        android:hint="Ingrese un numero"
+        android:layout_marginTop="35sp"
+        android:layout_centerInParent="true"
+        android:inputType="numberDecimal"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/txtTitulo2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Resultado"
+        android:textSize="30sp"
+        android:layout_below="@+id/txtCampo2"
+        android:gravity="center"
+        android:layout_marginTop="20sp"
+        />
+    <TextView
+        android:id="@+id/txtResultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="..."
+        android:textSize="30sp"
+        android:layout_below="@id/txtTitulo2"
+        android:gravity="center"
+        android:layout_marginTop="15sp"
+        />
+
+    <Button
+        android:id="@+id/btnSuma"
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:text="+"
+        android:textSize="40sp"
+        android:layout_below="@+id/txtResultado"
+        android:layout_marginTop="25sp"
+        android:layout_marginLeft="45sp"
+        android:onClick="onClick"
+        />
+    <Button
+        android:id="@+id/btnDividir"
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:text="/"
+        android:textSize="40sp"
+        android:layout_below="@+id/txtResultado"
+        android:layout_marginTop="25sp"
+        android:layout_marginRight="45sp"
+        android:onClick="onClick"
+        android:layout_alignParentRight="true"
+        />
+</RelativeLayout>

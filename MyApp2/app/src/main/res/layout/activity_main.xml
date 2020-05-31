@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Uso de EditText"
+        android:textSize="45sp"
+        android:gravity="center"
+        android:layout_marginTop="60sp"
+        />
+    <EditText
+        android:id="@+id/txtCampoNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingrese su nombre"
+        android:layout_below="@+id/txtTitulo"
+        android:layout_marginTop="45sp"
+        />
+    <EditText
+        android:id="@+id/txtCampoN1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingrese numero 1"
+        android:layout_below="@+id/txtCampoNombre"
+        android:layout_marginTop="45sp"
+        android:inputType="number"
+        />
+    <EditText
+        android:id="@+id/txtCampoN2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingrese numero 2"
+        android:layout_below="@+id/txtCampoN1"
+        android:layout_marginTop="45sp"
+        android:inputType="number"
+        />
+
+    <Button
+        android:id="@+id/btnMostrar"
+        android:layout_width="250sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtCampoN2"
+        android:layout_marginTop="48dp"
+        android:layout_centerInParent="true"
+        android:text="Verificar"
+        android:onClick="pulsar"
+        />
+    <TextView
+        android:id="@+id/txtMostrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mostrar"
+        android:textSize="35sp"
+        android:layout_below="@+id/btnMostrar"
+        android:layout_marginTop="45sp"
+        android:gravity="center"
+        android:textStyle="italic"
+        />
+</RelativeLayout>

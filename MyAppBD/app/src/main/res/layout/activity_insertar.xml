@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".InsertarActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Insertar Bebida"
+        android:layout_gravity="center_horizontal"
+        android:textSize="25dp"
+        android:layout_margin="10dp"
+        />
+
+    <EditText
+        android:id="@+id/txtId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Id"
+        android:layout_margin="15dp"
+        />
+    <EditText
+        android:id="@+id/txtMarca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Marca"
+        android:layout_margin="15dp"
+        />
+    <EditText
+        android:id="@+id/txtNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre"
+        android:layout_margin="15dp"
+        />
+    <EditText
+        android:id="@+id/txtSabor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Sabor"
+        android:layout_margin="15dp"
+        />
+
+    <Button
+        android:id="@+id/btnInsertarDatos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Insertar Datos"
+        android:layout_margin="10dp"
+        android:background="#FFEB3B"
+        android:onClick="onClick"
+        />
+
+</LinearLayout>

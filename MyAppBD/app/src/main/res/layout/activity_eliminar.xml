@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".EliminarActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <EditText
+            android:id="@+id/IngresarIdE"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="Ingrese ID"
+            android:textSize="20dp"
+            android:layout_margin="10dp"
+            />
+        <Button
+            android:id="@+id/btnBuscarE"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="Buscar"
+            android:textSize="25dp"
+            android:layout_margin="10dp"
+            android:background="#FFEB3B"
+            android:onClick="onClick"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtDato1E"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textSize="20dp"
+        android:hint="..."
+        />
+    <TextView
+        android:id="@+id/txtDato2E"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textSize="20dp"
+        android:hint="..."
+        />
+    <TextView
+        android:id="@+id/txtDato3E"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textSize="20dp"
+        android:hint="..."
+        />
+
+    <Button
+        android:id="@+id/btnEliminarDato"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Eliminar"
+        android:layout_margin="10dp"
+        android:background="#FFEB3B"
+        android:onClick="onClick"
+        />
+
+</LinearLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mostrar Datos"
+        android:textSize="45sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginTop="50sp"
+         />
+    <EditText
+        android:id="@+id/txtCampo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtTitulo"
+        android:layout_marginTop="55sp"
+        android:hint="Ingrese su nombre"
+        android:textStyle="bold"
+        android:inputType="text"
+
+        />
+
+    <Button
+        android:id="@+id/btnValidar"
+        android:layout_width="120sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtCampo"
+        android:layout_marginTop="55sp"
+        android:text="Validar"
+        android:layout_centerInParent="true"
+        android:onClick="onclick"
+        />
+    <TextView
+        android:id="@+id/txtMostrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnValidar"
+        android:layout_marginTop="50sp"
+        android:text="Mostrar..."
+        android:gravity="center"
+        android:textStyle="italic"
+        android:textSize="30sp"
+        />
+
+</RelativeLayout>

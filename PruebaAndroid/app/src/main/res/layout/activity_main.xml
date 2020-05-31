@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/etqTituto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contador de Pulsos"
+        android:gravity="center"
+        android:textSize="35sp"
+        android:layout_marginTop="75sp"
+        />
+    <TextView
+        android:id="@+id/etqNumero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etqTituto"
+        android:layout_marginTop="100sp"
+        android:gravity="center"
+        android:textSize="150sp"
+        android:hint="0"
+        />
+    <Button
+        android:id="@+id/btnMas"
+        android:layout_width="180sp"
+        android:layout_height="100sp"
+        android:layout_below="@+id/etqNumero"
+        android:layout_marginTop="80sp"
+        android:layout_marginLeft="5sp"
+        android:text="+"
+        android:textSize="55sp"
+        android:textStyle="bold"
+        android:background="@android:color/holo_green_light"
+        android:onClick="pulsar"
+
+        />
+    <Button
+        android:id="@+id/btnMenos"
+        android:layout_width="180sp"
+        android:layout_height="100sp"
+        android:layout_below="@id/etqNumero"
+        android:layout_marginTop="80sp"
+        android:layout_alignRight="@id/btnMas"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5sp"
+        android:text="-"
+        android:textSize="55sp"
+        android:textStyle="bold"
+        android:background="@android:color/holo_red_light"
+        android:onClick="pulsar"
+        />
+
+</RelativeLayout>
