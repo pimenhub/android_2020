@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DirectFragment"
+    android:background="@android:color/white">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Directores:"
+            android:textSize="35dp"
+            android:textColor="@android:color/black"
+            />
+        <TextView
+            android:id="@+id/txtDirectores"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Directores"
+            android:textColor="@android:color/black"
+            android:textSize="20dp"
+            android:layout_margin="5dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Actores:"
+            android:textSize="35dp"
+            android:textColor="@android:color/black"
+            />
+        <TextView
+            android:id="@+id/txtActores"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Actores"
+            android:textColor="@android:color/black"
+            android:textSize="20dp"
+            android:layout_margin="5dp"
+            />
+
+    </LinearLayout>
+
+
+</FrameLayout>
