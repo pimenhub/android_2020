@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".EliminarActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Eliminar Medicamento"
+        android:textSize="25dp"
+        android:layout_margin="15dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#1E88E5"
+        android:textStyle="bold"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="35dp"
+        >
+        <EditText
+            android:id="@+id/txtIdEliminar"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:hint="Ingresar ID"
+            android:textSize="20dp"
+            android:inputType="number"
+            android:layout_margin="10dp"
+            />
+        <Button
+            android:id="@+id/btnBuscarE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buscar"
+            android:background="@color/colorAccent"
+            android:layout_margin="10dp"
+            android:onClick="onClick"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/nombreME"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="..."
+        android:textSize="25dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:textColor="@android:color/black"
+        />
+    <TextView
+        android:id="@+id/cantidadE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="..."
+        android:textSize="25dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:textColor="@android:color/black"
+        />
+    <TextView
+        android:id="@+id/precioE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="..."
+        android:textSize="25dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:textColor="@android:color/black"
+        />
+    <TextView
+        android:id="@+id/fechaVE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="..."
+        android:textSize="25dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:textColor="@android:color/black"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="40dp"
+        >
+        <Button
+            android:id="@+id/btnEliminarMedicamento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Eliminar Medicamento"
+            android:background="@color/colorAccent"
+            android:layout_margin="10dp"
+            android:onClick="onClick"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>

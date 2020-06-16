@@ -20,6 +20,14 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), InsertarActivity.class);
                 startActivity(intent);
                 break;
+            case  R.id.btnMostrar:
+                Intent intent1 = new Intent(getApplicationContext(), MostrarActivity.class);
+                startActivity(intent1);
+                break;
+            case  R.id.btnEliminar:
+                Intent intent2 = new Intent(getApplicationContext(), EliminarActivity.class);
+                startActivity(intent2);
+                break;
         }
     }
 }

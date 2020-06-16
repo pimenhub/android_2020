@@ -12,7 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".InsertarActivity"></activity>
+        <activity android:name=".EliminarActivity"></activity>
+        <activity android:name=".MostrarActivity" />
+        <activity android:name=".InsertarActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
