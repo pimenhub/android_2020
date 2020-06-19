@@ -28,6 +28,10 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent2 = new Intent(getApplicationContext(), EliminarActivity.class);
                 startActivity(intent2);
                 break;
+            case  R.id.btnActualizar:
+                Intent intent3 = new Intent(getApplicationContext(), ActualizarActivity.class);
+                startActivity(intent3);
+                break;
         }
     }
 }

@@ -24,7 +24,7 @@ import java.util.Calendar;
 
 public class InsertarActivity extends AppCompatActivity implements Response.Listener<JSONObject>, Response.ErrorListener{
 
-    public static final String IP_SERVER ="http://192.168.0.11/";
+    public static final String IP_SERVER ="http://192.168.0.10/";
 
     private EditText txt1, txt2, txt3, txt4;
 

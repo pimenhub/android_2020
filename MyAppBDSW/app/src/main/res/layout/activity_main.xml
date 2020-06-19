@@ -58,6 +58,17 @@
         android:textStyle="bold"
         android:onClick="onClick"
         />
+    <Button
+        android:id="@+id/btnActualizar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Actualizar"
+        android:background="@color/colorAccent"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:onClick="onClick"
+        />
 
 
 </LinearLayout>
