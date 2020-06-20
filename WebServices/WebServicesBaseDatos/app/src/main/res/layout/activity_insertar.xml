@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Insertar">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Insertar Medicamento"
+        android:layout_gravity="center"
+        android:layout_margin="20sp"
+        android:textSize="30sp"
+        android:textColor="#000000"
+        />
+
+    <EditText
+        android:id="@+id/nombreMedicamento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="30sp"
+        android:hint="Nombre del Medicamento"
+        android:inputType="textPersonName"
+        />
+
+    <EditText
+        android:id="@+id/cantidad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="30sp"
+        android:hint="Cantidad"
+        android:inputType="number"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/fechaVencimiento"
+            android:layout_width="320sp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="Fecha de Vencimiento"
+            android:inputType="date"
+            android:layout_margin="10sp"
+            android:layout_marginLeft="15sp"
+            android:onClick="insertar"
+            />
+
+        <ImageButton
+            android:id="@+id/datePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_date"
+            android:layout_margin="10sp"
+            android:onClick="insertar"
+            />
+
+    </LinearLayout>
+    <EditText
+        android:id="@+id/precio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="30sp"
+        android:hint="Precio"
+        android:inputType="numberDecimal"
+        />
+
+    <Button
+        android:id="@+id/insertar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2196F3"
+        android:textColor="#ffffff"
+        android:text="Insertar Datos"
+        android:textSize="30sp"
+        android:layout_margin="25sp"
+        android:onClick="insertar"
+        />
+
+</LinearLayout>

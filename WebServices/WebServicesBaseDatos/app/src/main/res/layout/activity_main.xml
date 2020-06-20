@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Framaceutica Aqui Hay"
+        android:layout_margin="15sp"
+        android:textSize="25sp"
+        android:textColor="#000000"
+        />
+
+    <ImageView
+        android:layout_width="200sp"
+        android:layout_height="200sp"
+        android:src="@drawable/medicine"
+        android:layout_gravity="center"
+        android:layout_margin="25sp"
+        />
+
+    <Button
+        android:id="@+id/insertar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#8BC34A"
+        android:text="Ingresar Nuevo Medicamento"
+        android:textSize="25sp"
+        android:onClick="nextActivity"
+        android:layout_margin="25sp"
+        />
+
+
+
+    <Button
+        android:id="@+id/mostrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#8BC34A"
+        android:layout_margin="25sp"
+        android:text="Listado Medicina"
+        android:textSize="25sp"
+        android:onClick="nextActivity"
+        />
+
+    <Button
+        android:id="@+id/eliminar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#8BC34A"
+        android:layout_margin="25sp"
+        android:text="Informacion"
+        android:textSize="25sp"
+        android:onClick="nextActivity"
+        />
+
+
+
+</LinearLayout>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ConsultaId">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Informacion Medicamento"
+        android:gravity="center"
+        android:textSize="35sp"
+        android:layout_margin="15sp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15sp">
+
+        <EditText
+            android:id="@+id/idBusqueda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="ingresar ID"
+            android:textSize="25sp"
+            android:layout_margin="10sp"
+            android:layout_weight="1"
+            android:inputType="number"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buscar"
+            android:textSize="25sp"
+            android:layout_margin="10sp"
+            android:layout_weight="1"
+            android:background="#4CAF50"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:onClick="ejecutarConsulta"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15sp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modificar Informacion?"
+            android:textSize="25sp"
+            android:layout_margin="10sp"
+            />
+
+        <CheckBox
+            android:id="@+id/check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50sp"
+            android:onClick="val_check"
+
+            />
+
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/nombre_medicamento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre Medicamento"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:layout_marginTop="30sp"
+        android:inputType="textPersonName"
+        />
+
+    <EditText
+        android:id="@+id/cantidad_medicamento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Cantidad Medicamento"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:layout_marginTop="30sp"
+        android:inputType="number"
+        />
+
+    <EditText
+        android:id="@+id/precio_medicamento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Precio Medicamento"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:layout_marginTop="30sp"
+        android:inputType="numberDecimal"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30sp">
+
+        <EditText
+            android:id="@+id/fecha_vencimiento"
+            android:layout_width="320sp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:hint="Fecha de Vencimiento"
+            android:inputType="date"
+            android:layout_margin="10sp"
+            android:layout_marginLeft="15sp"
+            android:onClick="dateSelector"
+            />
+
+        <ImageButton
+            android:id="@+id/datePicker2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_date"
+            android:layout_margin="10sp"
+            android:onClick="dateSelector"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnEliminar"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50sp"
+            android:layout_marginLeft="15sp"
+            android:layout_marginRight="15sp"
+            android:text="Eliminar"
+            android:background="#4CAF50"
+            android:textColor="#ffffff"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:onClick="tipoConsulta"
+            />
+
+        <Button
+            android:id="@+id/btnModificar"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50sp"
+            android:layout_marginLeft="15sp"
+            android:layout_marginRight="15sp"
+            android:text="Modificar"
+            android:background="#4CAF50"
+            android:textColor="#ffffff"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:onClick="tipoConsulta"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>
