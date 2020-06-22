@@ -14,10 +14,10 @@ if(isset($_GET["id"])){
 
     $conexion = mysqli_connect(HOST,USER,PASS,BD);
 
-    $consulta_mostrar_eliminar = "SELECT nombre_medicamento, cantidad, precio, fecha_vencimiento 
+    $consulta_mostrar_id = "SELECT nombre_medicamento, cantidad, precio, fecha_vencimiento 
     FROM tbl_medicamento WHERE id = $id";
 
-    $resultado_consulta = mysqli_query($conexion, $consulta_mostrar_eliminar) or die ("ERROR " . mysqli_error($conexion));
+    $resultado_consulta = mysqli_query($conexion, $consulta_mostrar_id) or die ("ERROR " . mysqli_error($conexion));
 
     if($registro = mysqli_fetch_array($resultado_consulta)){
         $json["tbl_medicamento"][]= $registro;
@@ -35,10 +35,10 @@ if(isset($_GET["id"])){
     mysqli_close($conexion);
 }
     else{
-        $resultante["id"] = "ERROR";
+        $resultante["id"] = 0;
         $resultante["nombre_medicamento"] = "ERROR";
-        $resultante["cantidad"] = "ERROR";
-        $resultante["precio"] = "ERROR";
+        $resultante["cantidad"] = 0;
+        $resultante["precio"] = 0;
         $resultante["fecha_vencimiento"] = "ERROR";
         $json["tbl_medicamento"][] = $resultante;
         echo json_encode($json);

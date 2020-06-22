@@ -2,8 +2,10 @@ package com.example.myappbdsw;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,6 +22,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Calendar;
+
 public class ActualizarActivity extends AppCompatActivity implements Response.Listener<JSONObject>, Response.ErrorListener{
     private EditText txtB, txt1, txt2, txt3, txt4;
 
@@ -27,6 +31,14 @@ public class ActualizarActivity extends AppCompatActivity implements Response.Li
     JsonObjectRequest jsonObjectRequest;
     JSONArray jsonArray;
     JSONObject jsonObject;
+
+    //Calendario para obtener fecha & hora
+    public final Calendar c = Calendar.getInstance();
+
+    ///Variables para obtener la fecha
+    final int mes = c.get(Calendar.MONTH);
+    final int dia = c.get(Calendar.DAY_OF_MONTH);
+    final int anio = c.get(Calendar.YEAR);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +56,7 @@ public class ActualizarActivity extends AppCompatActivity implements Response.Li
         txt4.setEnabled(false);
 
         requestQueue = Volley.newRequestQueue(this);
+
     }
 
     public void onClick(View view) {
@@ -72,9 +85,40 @@ public class ActualizarActivity extends AppCompatActivity implements Response.Li
             case R.id.btnVolver:
                 txtB.setEnabled(true);
                 break;
+            case R.id.imgFechaA:
+                this.fechaCalendario();
+                break;
         }
     }
+    public void fechaCalendario(){
+        DatePickerDialog recogerFecha = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                //Esta variable lo que realiza es aumentar en uno el mes ya que comienza desde 0 = enero
+                final int mesActual = month + 1;
+                //Formateo el día obtenido: antepone el 0 si son menores de 10
+                String diaFormateado = (dayOfMonth < 10)? 0 + String.valueOf(dayOfMonth):String.valueOf(dayOfMonth);
+                //Formateo el mes obtenido: antepone el 0 si son menores de 10
+                String mesFormateado = (mesActual < 10)? 0 + String.valueOf(mesActual):String.valueOf(mesActual);
+                //Convertir anio
+                String anio = String.valueOf(year);
 
+                //Muestro la fecha con el formato deseado
+                txt4.setText(mesFormateado + "/" + diaFormateado + "/" + anio);
+                //txt4.setText(diaFormateado + "/" + mesFormateado + "/" + anio);
+
+                //System.out.println("---------------------------"+diaFormateado + "/" + mesFormateado + "/" + anio);
+            }
+            //Estos valores deben ir en ese orden, de lo contrario no mostrara la fecha actual
+            /**
+             *También puede cargar los valores que usted desee
+             */
+        },anio, mes, dia);
+        //Muestro el widget
+        recogerFecha.show();
+
+
+    }
     //metodo para buscar por ID
     public void buscarInfo(){
         String url;
@@ -102,7 +146,7 @@ public class ActualizarActivity extends AppCompatActivity implements Response.Li
                 url = InsertarActivity.IP_SERVER + "php_sw/actualizar_sw.php?nombre_medicamento="+txt1.getText().toString()
                         +"&cantidad="+txt2.getText().toString()+"&precio="+txt3.getText().toString()+"&fecha_vencimiento="+
                         txt4.getText().toString()+"&id="+txtB.getText().toString();
-                jsonObjectRequest = new JsonObjectRequest(Request.Method.GET,url,null,this  ,this);
+                jsonObjectRequest = new JsonObjectRequest(Request.Method.GET,url,null,null  ,this);
                 requestQueue.add(jsonObjectRequest);
                 txtB.setText("");
                 txt1.setText("");
@@ -123,8 +167,13 @@ public class ActualizarActivity extends AppCompatActivity implements Response.Li
 
     @Override
     public void onResponse(JSONObject response) {
+
+
         this.respuesta(response);
+
+
     }
+
     public void respuesta(JSONObject respuesta){
         Medicamento medicamento = new Medicamento();
         jsonArray = respuesta.optJSONArray("tbl_medicamento");
@@ -148,7 +197,8 @@ public class ActualizarActivity extends AppCompatActivity implements Response.Li
 
     @Override
     public void onErrorResponse(VolleyError error) {
-
+        Toast.makeText(this, "Error Volley "+ error, Toast.LENGTH_SHORT).show();
+        System.err.println("------------- "+error);
     }
 
 

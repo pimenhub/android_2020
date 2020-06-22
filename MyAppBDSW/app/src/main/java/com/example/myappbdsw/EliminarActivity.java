@@ -28,12 +28,12 @@ public class EliminarActivity extends AppCompatActivity implements Response.List
     private EditText txtB;
     private TextView txt1, txt2, txt3, txt4;
 
-    ArrayList<Medicamento> listaMedicamento;
-    ArrayList<String> listaDatos;
     RequestQueue requestQueue;
     JsonObjectRequest jsonObjectRequest;
     JSONArray jsonArray;
     JSONObject jsonObject;
+    Eliminar eliminar = new Eliminar();
+    int datoId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,11 +54,26 @@ public class EliminarActivity extends AppCompatActivity implements Response.List
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.btnBuscarE:
-                this.buscarInfo();
+                if(!txtB.getText().toString().isEmpty()) {
+                    this.buscarInfo();
+                }
+                else {
+                    Toast.makeText(this, "Datos No Ingresados", Toast.LENGTH_SHORT).show();
+                }
                 break;
             case R.id.btnEliminarMedicamento:
-                this.eliminarSW();
-                break;
+                if(!txtB.getText().toString().isEmpty()&& !txt1.getText().toString().equals("...")) {
+                    eliminar.eliminarClase(getApplicationContext(), Integer.parseInt(txtB.getText().toString()));
+                    txtB.setText("");
+                    txt1.setText("...");
+                    txt2.setText("...");
+                    txt3.setText("...");
+                    txt4.setText("...");
+                }
+                else {
+                    Toast.makeText(this, "Datos No Ingresados", Toast.LENGTH_SHORT).show();
+                }
+                    break;
         }
     }
 //metodo para buscar por ID
@@ -81,30 +96,6 @@ public class EliminarActivity extends AppCompatActivity implements Response.List
     }
 
     ///Metodo para eliminar el dato encontrado
-    public void eliminarSW(){
-        String url;
-        if(!txtB.getText().toString().isEmpty() && !txt1.getText().toString().equals("") && !txt1.getText().toString().equals("...")) {
-
-            try {
-                url = InsertarActivity.IP_SERVER + "php_sw/eliminar_sw.php?id=" + txtB.getText().toString();
-                jsonObjectRequest = new JsonObjectRequest(Request.Method.GET,url,null,this  ,this);
-                requestQueue.add(jsonObjectRequest);
-                txtB.setText("");
-                txt1.setText("...");
-                txt2.setText("...");
-                txt3.setText("...");
-                txt4.setText("...");
-                Toast.makeText(this, "Datos Eliminados", Toast.LENGTH_SHORT).show();
-            }
-            catch (Exception e){
-                Toast.makeText(this, "Error Desconocido---------------", Toast.LENGTH_SHORT).show();
-            }
-
-        }
-        else {
-            Toast.makeText(this, "Datos No Ingresados", Toast.LENGTH_SHORT).show();
-        }
-    }
 
     @Override
     public void onResponse(JSONObject response) {
@@ -134,7 +125,8 @@ public class EliminarActivity extends AppCompatActivity implements Response.List
 
     @Override
     public void onErrorResponse(VolleyError error) {
-
+        Toast.makeText(this, "Error Volley "+ error, Toast.LENGTH_SHORT).show();
+        System.err.println("------------- "+error);
     }
 
 

@@ -70,15 +70,31 @@
         android:layout_margin="10dp"
         android:textColor="@android:color/black"
         />
-    <EditText
-        android:id="@+id/fechaVA"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="25dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="10dp"
-        android:textColor="@android:color/black"
-        />
+        android:orientation="horizontal"
+        >
+        <EditText
+            android:id="@+id/fechaVA"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:textColor="@android:color/black"
+            />
+        <ImageButton
+            android:id="@+id/imgFechaA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_date"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="10dp"
+            android:onClick="onClick"
+            />
+    </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
